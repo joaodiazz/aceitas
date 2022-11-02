@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #424242;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  transform: translateY(-100vh);
+  opacity: 0;
+  animation: makeItUp 2s forwards;
+}
+
+@keyframes makeItUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heart {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-size: 160px;
+  color: #d42727;
+  text-shadow: 0 0 5px #e57373, 0 0 10px #e57373, 0 0 15px #e57373,
+    0 0 20px #b71c1c, 0 0 30px #b71c1c, 0 0 40px #b71c1c, 0 0 55px #b71c1c,
+    0 0 75px #b71c1c;
+  animation: heart 2.4s infinite;
+}
+
+@keyframes heart {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.08;
+    color: #d32f2f;
+    text-shadow: 0 0 5px #cd6155, 0 0 10px #cd6155, 0 0 15px #cd6155,
+      0 0 20px #ad1515, 0 0 30px #ad1515, 0 0 40px #ad1515, 0 0 55px #ad1515,
+      0 0 75px #ad1515;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.question {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btns {
+  position: relative;
+}
+
+.btns button {
+  font-weight: 600;
+  border: none;
+  padding: 9px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btns .sim {
+  position: absolute;
+  left: 90px;
+  background-color: #c8e6c9;
+  color: #43a047;
+}
+
+.btns .nao {
+  position: absolute;
+  right: 90px;
+  background-color: #ffcdd2;
+  color: #d32f2f;
+}
+
+@media (max-width: 460px) {
+  .question {
+    font-size: 23px;
+  }
+
+  .btns button {
+    padding: 7px 23px;
+  }
+
+  .btns .sim {
+    position: absolute;
+    left: 60px;
+    background-color: #c8e6c9;
+    color: #43a047;
+  }
+
+  .btns .nao {
+    position: absolute;
+    right: 60px;
+    background-color: #ffcdd2;
+    color: #d32f2f;
+  }
+}
